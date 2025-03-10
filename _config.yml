@@ -1,31 +1,30 @@
-# Site settings
-title: Hux Blog
-SEOTitle: Jeff'Blog 
-header-img: img/home-bg.jpg
-email: jeffsu470@gmail.com
-description: "Learn to explore"
-keyword: "DL, ML, NLP，Agent, RL"
-url: "https://huangxuan.me" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+# 网站基本设置
+title: Hux Blog # 网站标题
+SEOTitle: Jeff'Blog # SEO 优化使用的标题
+header-img: img/home-bg.jpg # 首页头图路径
+email: jeffsu470@gmail.com # 联系邮箱
+description: "Learn to explore" # 网站描述
+keyword: "DL, ML, NLP，Agent, RL" # 网站关键词
+# url: "https://huangxuan.me"    # 网站网址（可选，如博客部署在子目录时设置 baseurl）
+baseurl: "" # 基础路径（例如部署在 host/blog 则设置为 '/blog'）
 
-# Publish posts or collection documents with a future date.
-future: true
+# 发布设置
+future: true # 是否允许发布未来日期的文章
 
-# SNS settings
-RSS: false
-weibo_username: huxpro
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+# 社交账号设置
+RSS: false # 是否开启 RSS
+# weibo_username: huxpro # 微博用户名
+# zhihu_username: huxpro # 知乎用户名
+github_username: Jeff470sql # GitHub 用户名
+# twitter_username: huxpro # Twitter 用户名
+#facebook_username:  huxpro   # Facebook 用户名（已注释）
+#linkedin_username:  firstname-lastname-idxxxx  # LinkedIn 用户名
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude:
+# 构建设置
+highlighter: rouge # 使用 rouge 高亮代码（GitHub Pages 推荐）
+permalink: pretty # 链接格式使用 prettified 风格
+paginate: 10 # 每页文章数量
+exclude: # 构建时排除的文件或文件夹
   [
     "less",
     "node_modules",
@@ -34,61 +33,54 @@ exclude:
     "README.md",
     "README.zh.md",
   ]
-anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN
+anchorjs: true # 是否启用 anchor.js（标题锚点功能）
+#timezone: CN             # 如有时区问题，可取消注释并设置中国时区
 
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
-# `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+# 插件设置
+plugins: [jekyll-paginate] # 启用 jekyll-paginate 分页插件
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
+# Markdown 设置
+markdown: kramdown # 使用 kramdown 解析 Markdown
 kramdown:
-  input: GFM # use Github Flavored Markdown !important
+  input: GFM # 使用 GitHub Flavored Markdown (GFM)
   syntax_highlighter_opts:
     span:
-      line_numbers: false
+      line_numbers: false # 内联代码不显示行号
     block:
-      line_numbers: true
-      start_line: 1
+      line_numbers: true # 代码块显示行号
+      start_line: 1 # 代码块行号从 1 开始
 
-# Disqus settings
-disqus_username: hux
+# 评论系统设置
+disqus_username: Jeff # Disqus 评论系统用户名
 
-# Netease settings
-netease_comment: false
+# 网易云评论设置
+netease_comment: false # 是否启用网易云评论
 
-# Analytics settings
+# 分析统计设置
 # Baidu Analytics
-# ba_track_id: [your track id]
+# ba_track_id: [your track id]  # 百度统计账号（如需要请取消注释并设置）
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: "UA-49627206-1" # Google Analytics 跟踪 ID，格式：UA-xxxxxx-xx
+ga_domain: huangxuan.me # 分析域名
 
-# Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+# 侧边栏设置
+sidebar: true # 是否显示侧边栏
+sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta" # 侧边栏关于描述
+sidebar-avatar: https://github.com/Jeff470sql.png # 侧边栏头像（需使用绝对 URL）
 
-# Featured Tags
-featured-tags: true # whether or not using Feature-Tags
-featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
+# 特色标签设置
+featured-tags: true # 是否启用特色标签功能
+featured-condition-size: 1 # 标签数量阈值，标签文章数需大于该值时才标记为特色标签
 
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+# 渐进式网页应用（PWA）设置
+chrome-tab-theme-color: "#000000" # Chrome 标签页主题颜色
+service-worker: true # 是否启用 Service Worker（PWA支持）
 
-# MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: false
+# 带数学公式页面的 MathJax 渲染设置
+page-mathjax: false # 是否启用 MathJax，用于数学公式渲染
 
-# Friends
+# 友情链接设置
 friends:
   [
     { title: "乱序（Midare）", href: "http://mida.re/" },
